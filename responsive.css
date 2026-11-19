@@ -1,0 +1,812 @@
+
+/* =========================================================
+   P.R.I.M.O. — RESPONSIVE DESIGN SYSTEM
+   File: responsive.css
+   Supports: Desktop, laptop, tablet and mobile
+   ========================================================= */
+
+/* -------------------- 1. LARGE LAPTOPS -------------------- */
+
+@media (max-width: 1200px) {
+  :root {
+    --container: 1060px;
+  }
+
+  .hero-title {
+    font-size: clamp(48px, 7vw, 75px);
+  }
+
+  .overview-container {
+    gap: 35px;
+  }
+
+  .creator-container {
+    gap: 35px;
+  }
+}
+
+/* -------------------- 2. TABLETS & SMALL LAPTOPS -------------------- */
+
+@media (max-width: 1024px) {
+  .section-padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .navbar {
+    min-height: 76px;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-link {
+    font-size: 12px;
+  }
+
+  .nav-cta {
+    padding: 9px 14px;
+    font-size: 11px;
+  }
+
+  .hero-section {
+    min-height: 650px;
+  }
+
+  .hero-side-mark {
+    right: 1%;
+  }
+
+  .overview-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+
+  .domains-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .future-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .enquiry-layout {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 18px;
+  }
+
+  .enquiry-information,
+  .enquiry-form-panel {
+    padding: 24px;
+  }
+}
+
+/* -------------------- 3. NAVIGATION TABLET MODE -------------------- */
+
+@media (max-width: 850px) {
+  .navbar {
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 17px;
+    border: 1px solid var(--border);
+    border-top: 0;
+    border-radius: 0 0 18px 18px;
+    background: rgba(3, 12, 25, 0.98);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .nav-links.menu-open {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 12px 10px;
+    border-radius: 8px;
+    font-size: 13px;
+  }
+
+  .nav-link:hover {
+    background: rgba(0, 135, 255, 0.1);
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .nav-cta {
+    margin-top: 7px;
+    text-align: center;
+  }
+
+  .overview-container,
+  .creator-container {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-panel {
+    max-width: 650px;
+  }
+
+  .creator-container {
+    gap: 30px;
+  }
+
+  .intro-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .intro-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .achievement-item {
+    grid-template-columns: 80px 1fr auto;
+    gap: 15px;
+  }
+
+  .enquiry-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-side-mark {
+    display: none;
+  }
+}
+
+/* -------------------- 4. TABLETS -------------------- */
+
+@media (max-width: 700px) {
+  .container {
+    width: min(100% - 36px, var(--container));
+  }
+
+  .section-padding {
+    padding-top: 68px;
+    padding-bottom: 68px;
+  }
+
+  .hero-section {
+    min-height: auto;
+    padding: 100px 0 70px;
+  }
+
+  .hero-content {
+    width: calc(100% - 36px);
+  }
+
+  .hero-title {
+    font-size: clamp(42px, 9vw, 63px);
+    letter-spacing: -2px;
+  }
+
+  .project-name {
+    font-size: clamp(25px, 6vw, 38px);
+    letter-spacing: 3px;
+  }
+
+  .project-full-form {
+    font-size: 9px;
+    letter-spacing: 1.2px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-bottom-info {
+    gap: 18px;
+    margin-top: 38px;
+  }
+
+  .hero-bottom-info > div {
+    min-width: 110px;
+  }
+
+  .section-heading {
+    margin-bottom: 32px;
+  }
+
+  .section-heading h2,
+  .section-heading .heading-title {
+    font-size: clamp(29px, 6vw, 40px);
+  }
+
+  .page-hero {
+    padding: 75px 0 48px;
+  }
+
+  .page-title {
+    font-size: clamp(35px, 8vw, 52px);
+    letter-spacing: -1px;
+  }
+
+  .page-description {
+    font-size: 13px;
+  }
+
+  .identity-panel {
+    padding: 24px;
+  }
+
+  .detail-grid,
+  .vision-grid,
+  .engineering-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .competition-data {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .timeline-item {
+    grid-template-columns: 45px 1fr;
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-links {
+    gap: 14px 20px;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* -------------------- 5. MOBILE PHONES -------------------- */
+
+@media (max-width: 520px) {
+  .container {
+    width: calc(100% - 30px);
+  }
+
+  .navbar {
+    min-height: 70px;
+  }
+
+  .brand {
+    gap: 9px;
+  }
+
+  .brand-symbol {
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+    font-size: 15px;
+  }
+
+  .brand-name {
+    font-size: 13px;
+    letter-spacing: 0.8px;
+  }
+
+  .brand-name span {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+  }
+
+  .menu-toggle {
+    width: 39px;
+    height: 39px;
+  }
+
+  .hero-section {
+    padding: 80px 0 55px;
+  }
+
+  .hero-content {
+    width: calc(100% - 30px);
+  }
+
+  .status-label {
+    padding: 7px 11px;
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .hero-pretitle {
+    margin-top: 27px;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+  }
+
+  .hero-title {
+    font-size: clamp(37px, 10vw, 49px);
+    letter-spacing: -1.7px;
+  }
+
+  .project-name {
+    margin-top: 17px;
+    font-size: clamp(23px, 7vw, 31px);
+    letter-spacing: 2px;
+  }
+
+  .project-full-form {
+    font-size: 8px;
+    letter-spacing: 0.8px;
+    line-height: 1.8;
+  }
+
+  .hero-description {
+    margin-top: 19px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 11px;
+    margin-top: 27px;
+  }
+
+  .button {
+    width: 100%;
+    min-height: 47px;
+    padding: 12px 17px;
+    font-size: 12px;
+  }
+
+  .hero-bottom-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 17px;
+    margin-top: 32px;
+  }
+
+  .hero-bottom-info strong {
+    font-size: 14px;
+  }
+
+  .hero-bottom-info > div {
+    font-size: 10px;
+  }
+
+  .section-padding {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  .section-heading {
+    margin-bottom: 27px;
+  }
+
+  .section-heading h2,
+  .section-heading .heading-title {
+    font-size: 29px;
+    letter-spacing: -0.8px;
+  }
+
+  .section-heading p {
+    font-size: 12px;
+  }
+
+  .intro-grid,
+  .domains-grid,
+  .feature-grid,
+  .future-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-card,
+  .intro-card:last-child {
+    grid-column: auto;
+    min-height: 210px;
+    padding: 23px;
+  }
+
+  .domain-card {
+    min-height: 175px;
+  }
+
+  .achievement-item {
+    grid-template-columns: 1fr auto;
+    gap: 9px;
+    padding: 19px;
+  }
+
+  .achievement-level {
+    grid-column: 1 / -1;
+    font-size: 10px;
+  }
+
+  .achievement-category {
+    font-size: 14px;
+  }
+
+  .achievement-note {
+    font-size: 11px;
+  }
+
+  .overview-container {
+    gap: 25px;
+  }
+
+  .overview-content h2 {
+    font-size: 30px;
+  }
+
+  .overview-content p {
+    font-size: 12px;
+  }
+
+  .overview-panel {
+    padding: 21px;
+    border-radius: 20px;
+  }
+
+  .panel-top {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .panel-main {
+    padding: 27px 0;
+  }
+
+  .panel-main strong {
+    font-size: 37px;
+  }
+
+  .panel-small span {
+    font-size: 9px;
+  }
+
+  .panel-data {
+    gap: 13px;
+  }
+
+  .panel-data strong {
+    font-size: 11px;
+  }
+
+  .creator-section {
+    padding: 65px 0;
+  }
+
+  .creator-content h2 {
+    font-size: 31px;
+  }
+
+  .creator-content p {
+    font-size: 12px;
+  }
+
+  .final-cta-section {
+    padding: 60px 0;
+  }
+
+  .final-cta {
+    padding: 42px 21px;
+    border-radius: 22px;
+  }
+
+  .final-cta h2 {
+    font-size: 28px;
+  }
+
+  .final-cta p {
+    font-size: 12px;
+  }
+
+  .page-hero {
+    padding: 62px 0 40px;
+  }
+
+  .page-title {
+    font-size: 35px;
+  }
+
+  .page-description {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .page-meta {
+    gap: 7px;
+  }
+
+  .page-meta span {
+    padding: 7px 10px;
+    font-size: 9px;
+  }
+
+  .identity-panel,
+  .detail-card,
+  .vision-card,
+  .engineering-card,
+  .sustainability-panel,
+  .competition-panel {
+    padding: 21px;
+    border-radius: 18px;
+  }
+
+  .identity-full {
+    font-size: 20px;
+  }
+
+  .detail-card h3,
+  .engineering-card h3 {
+    font-size: 16px;
+  }
+
+  .detail-card p,
+  .engineering-card p {
+    font-size: 12px;
+  }
+
+  .category-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .category-heading h3 {
+    font-size: 18px;
+  }
+
+  .feature-card {
+    min-height: auto;
+    padding: 19px;
+  }
+
+  .competition-data {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+
+  .competition-data div {
+    padding: 13px;
+  }
+
+  .competition-data strong {
+    font-size: 13px;
+  }
+
+  .sustainability-item {
+    gap: 12px;
+  }
+
+  .sustainability-item span {
+    font-size: 11px;
+  }
+
+  .sustainability-item strong {
+    font-size: 18px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 38px 1fr;
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .timeline-number {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 11px;
+  }
+
+  .timeline-item h3 {
+    font-size: 14px;
+  }
+
+  .timeline-item p {
+    font-size: 11px;
+  }
+
+  .contact-card {
+    min-height: 155px;
+    padding: 21px;
+  }
+
+  .enquiry-information,
+  .enquiry-form-panel {
+    padding: 21px;
+    border-radius: 19px;
+  }
+
+  .enquiry-information h3,
+  .form-heading h3 {
+    font-size: 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 13px;
+  }
+
+  .form-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .creator-profile-card {
+    padding: 22px;
+  }
+
+  .creator-profile-heading {
+    align-items: flex-start;
+    gap: 13px;
+  }
+
+  .profile-symbol {
+    width: 47px;
+    height: 47px;
+    border-radius: 13px;
+    font-size: 15px;
+  }
+
+  .creator-profile-heading h3 {
+    font-size: 16px;
+  }
+
+  .creator-profile-description {
+    font-size: 12px;
+  }
+
+  .youtube-panel {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 21px;
+  }
+
+  .site-footer {
+    padding-top: 48px;
+  }
+
+  .footer-main {
+    gap: 25px;
+  }
+
+  .footer-brand p {
+    font-size: 11px;
+  }
+
+  .footer-links {
+    gap: 13px 17px;
+  }
+
+  .footer-links a {
+    font-size: 11px;
+  }
+
+  .footer-bottom {
+    font-size: 9px;
+  }
+
+  .orbit-ring {
+    opacity: 0.17;
+  }
+
+  .ambient-glow {
+    opacity: 0.1;
+  }
+
+  .dot-field {
+    opacity: 0.23;
+    background-size: 23px 23px;
+  }
+
+  .dot-field-two {
+    opacity: 0.1;
+  }
+}
+
+/* -------------------- 6. VERY SMALL PHONES -------------------- */
+
+@media (max-width: 360px) {
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  .brand-name {
+    font-size: 11px;
+  }
+
+  .brand-name span {
+    font-size: 7px;
+  }
+
+  .hero-title {
+    font-size: 35px;
+  }
+
+  .project-name {
+    font-size: 21px;
+    letter-spacing: 1px;
+  }
+
+  .project-full-form {
+    font-size: 7px;
+  }
+
+  .section-heading h2,
+  .section-heading .heading-title {
+    font-size: 26px;
+  }
+
+  .panel-data {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .achievement-item {
+    padding: 15px;
+  }
+
+  .page-title {
+    font-size: 30px;
+  }
+}
+
+/* -------------------- 7. LANDSCAPE MOBILE -------------------- */
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    min-height: auto;
+    padding-top: 65px;
+    padding-bottom: 55px;
+  }
+
+  .hero-title {
+    font-size: 43px;
+  }
+
+  .nav-links {
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+}
+
+/* -------------------- END OF RESPONSIVE.CSS -------------------- */
